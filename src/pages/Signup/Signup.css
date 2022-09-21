@@ -1,0 +1,12 @@
+.bg__link {
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.bg__link:hover {
+  text-decoration: underline;
+}
+
+.img {
+  width: 100%;
+}
