@@ -1,0 +1,29 @@
+.input {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+}
+
+.send label {
+  cursor: pointer;
+}
+
+.send i {
+  color: #a4b0be;
+}

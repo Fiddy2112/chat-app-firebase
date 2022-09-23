@@ -1,0 +1,23 @@
+.navbar-left {
+  background-color: #57606f;
+  height: 54px;
+}
+
+.borderRadius {
+  border-radius: 10px 0px 0px 0px;
+}
+
+span {
+  color: #2f3542;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.img-user {
+  height: 20px;
+  border-radius: 50%;
+  width: 20px;
+  margin-right: 5px;
+}

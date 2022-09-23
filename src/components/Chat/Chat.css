@@ -1,0 +1,27 @@
+.messages-output {
+  height: 80vh;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.navbar-right {
+  background-color: #57606f;
+  height: 54px;
+}
+
+.chatIcons {
+  display: flex;
+  gap: 10;
+  cursor: pointer;
+}
+
+.chatIcons > i {
+  color: #2f3542;
+  padding: 0px 10px;
+}
+
+.chatIcons > i:hover {
+  color: #a4b0be;
+  font-weight: bold;
+}

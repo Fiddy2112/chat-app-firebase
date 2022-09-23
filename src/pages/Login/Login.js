@@ -1,10 +1,36 @@
 import React from "react";
 import { Button, Form, Container, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import "./login.css";
+import { auth } from "../../config/firebase";
 
 function Login() {
-  const handleLogin = () => {};
+  const [err, setErr] = React.useState(false);
+  const [loginForm, setLoginForm] = React.useState({
+    email: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+
+  // const { email, password } = loginForm;
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    // setLoginForm({
+    //   ...loginForm,
+    //   [e.target.name]: e.target.value,
+    // });
+
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (err) {}
+  };
   return (
     <Container className="mt-5">
       <Row>
@@ -24,11 +50,11 @@ function Login() {
             <h1 className="text-center text-truncate">Welcome Back</h1>
             <p className="text-center">Glad to see you again!</p>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>UserName</Form.Label>
+              <Form.Label>Email</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter name..."
-                name="username"
+                placeholder="Enter your email..."
+                name="email"
                 required
               />
             </Form.Group>

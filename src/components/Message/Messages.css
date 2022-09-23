@@ -1,0 +1,14 @@
+.messages {
+  background-color: #f1f2f6;
+  padding: 10px;
+  height: calc(100% - 54px);
+  overflow-y: scroll;
+}
+.messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: rgba(226, 226, 226, 1);
+  border-radius: 10px;
+}
